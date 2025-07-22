@@ -1,7 +1,7 @@
 * {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+
   font-style: normal;
   margin: 0px;
   padding: 0px;
@@ -58,4 +58,138 @@ header {
 .config img:hover {
   background-color: #d0d1d2;
   cursor: pointer;
+}
+
+/* hero designing */
+.hero {
+  margin-top: 57px;
+  position: relative;
+}
+.slide1 {
+  opacity: 1;
+  background-image: url("./Assests-tesla/img1-1.avif");
+  background-repeat: none;
+  background-position: center center;
+  background-size: cover;
+
+  height: 75vh;
+  width: 100vw;
+}
+.hero button img {
+  height: 40px;
+  width: 40px;
+}
+.keys {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 4px rgb(136, 136, 136);
+}
+.leftbtn {
+  top: 50%;
+  position: absolute;
+  left: 3vw;
+}
+.rightbtn {
+  position: absolute;
+  top: 50%;
+
+  right: 3vw;
+}
+.keys:hover {
+  cursor: pointer;
+}
+.content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.content h1 {
+  font-size: 64px;
+  font-weight: 550;
+  color: white;
+}
+.content h4 {
+  font-size: 19px;
+  color: white;
+
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.content button {
+  padding: 4px 24px;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+}
+.blue {
+  background-color: #3e6ae1;
+}
+
+.sec1 {
+  display: flex;
+  border: 1px solid red;
+  padding: 48px 52px 0px;
+}
+.d {
+  display: flex;
+
+  background-color: rgb(240, 240, 240);
+  border-radius: 6px;
+}
+.sec1 > .d {
+  margin-right: 24px;
+}
+.d img {
+  width: 16vw;
+  border-radius: 3px;
+  margin: 4px;
+}
+.d h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+.d h6 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 4px 0px 12px 0px;
+  color: #5c5e62;
+}
+.content2 {
+  margin: 38px 38px 16px 38px;
+}
+.content2 button {
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  width: 80%;
+}
+.sec4 {
+  padding: 32px 38px;
+  display: flex;
+  height: 80vh;
+  /* justify-content: space-around; */
+}
+video {
+  border-radius: 12px;
+  width: 60vw;
+  height: 100%;
+  object-fit: cover;
+  margin: 0px 28px 0px 20px;
+}
+.non-playable img {
+  object-fit: cover;
+  border-radius: 12px;
+  width: 27vw;
+  height: 100%;
+}
+.post-footer {
+  position: fixed;
+  bottom: 0px;
 }

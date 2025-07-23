@@ -6,6 +6,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
 /* Designing header part */
@@ -14,38 +15,52 @@ header {
   position: fixed;
   top: 0px;
   background-color: white;
-
+  width: 100vw;
   display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: none;
+  padding: 4px 16px;
+  margin-right: 3vw;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #eeeff0;
+}
+.menu:hover {
+  cursor: pointer;
 }
 
+.logo {
+  padding: 5px 0px 0px 32px;
+}
 .logo img {
   height: 14px;
   width: 127px;
 }
-.logo {
-  padding-left: 32px;
-}
 
 .menuItems {
   display: flex;
-  margin: 0px 23vw 0px 19vw;
+  /* margin: 0px 28vw 0px 19vw; */
   text-align: center;
 }
-.a {
+.menuItems .a {
   padding: 6px 16px 2px 16px;
   font-size: 13px;
   font-weight: 600;
   text-align: center;
   border-radius: 3px;
 }
-.a:hover {
+.menuItems .a:hover {
   background-color: rgb(239, 239, 230);
   cursor: pointer;
 }
 
 .config {
   display: flex;
-  padding-right: 35px;
+  margin-right: 30px;
 }
 .config img {
   box-sizing: content-box;
@@ -59,7 +74,20 @@ header {
   background-color: #d0d1d2;
   cursor: pointer;
 }
-
+/* header - responsivness */
+@media (max-width: 1000px) {
+  .config,
+  .menuItems {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  header {
+    justify-content: space-between;
+  }
+}
+/* ------------------ */
 /* hero designing */
 .hero {
   margin-top: 57px;
@@ -75,7 +103,8 @@ header {
   height: 75vh;
   width: 100vw;
 }
-.hero button img {
+/* designing left and right btn */
+.keys img {
   height: 40px;
   width: 40px;
 }
@@ -93,22 +122,22 @@ header {
 .rightbtn {
   position: absolute;
   top: 50%;
-
   right: 3vw;
 }
 .keys:hover {
   cursor: pointer;
 }
+
 .content {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
 }
 .content h1 {
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 550;
   color: white;
 }
@@ -120,9 +149,11 @@ header {
   padding-bottom: 30px;
 }
 .content button {
-  padding: 4px 24px;
+  padding: 12px 44px;
+  margin-left: 4px;
   color: white;
   font-size: 14px;
+  font-weight: 600;
   border: none;
   border-radius: 3px;
 }
@@ -130,13 +161,17 @@ header {
   background-color: #3e6ae1;
 }
 
+/* ----------------------------
+        Designing section 1 
+----------------------------------*/
 .sec1 {
   display: flex;
-  border: 1px solid red;
-  padding: 48px 52px 0px;
+  padding: 48px 52px 0px 52px;
 }
 .d {
   display: flex;
+  margin: 7px;
+  overflow: hidden;
 
   background-color: rgb(240, 240, 240);
   border-radius: 6px;
@@ -148,6 +183,8 @@ header {
   width: 16vw;
   border-radius: 3px;
   margin: 4px;
+  object-fit: cover;
+  object-position: center center;
 }
 .d h2 {
   font-size: 35px;
@@ -169,6 +206,33 @@ header {
   border-radius: 3px;
   background-color: white;
   width: 80%;
+}
+.content2 button:hover {
+  cursor: pointer;
+}
+/* responsivness - sec1 */
+@media (max-width: 1000px) {
+  .d img {
+    display: none;
+  }
+  .d h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .d h6 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 4px 0px 18px 0px;
+    color: #5c5e62;
+  }
+}
+@media (max-width: 800px) {
+  .sec1 {
+    flex-wrap: wrap;
+  }
+  .d {
+    width: 100vw;
+  }
 }
 .sec4 {
   padding: 32px 38px;
@@ -192,4 +256,22 @@ video {
 .post-footer {
   position: fixed;
   bottom: 0px;
+}
+
+.maparea img {
+  width: 90vw;
+}
+.map {
+  margin: 36px 20px 0px 36px;
+}
+.map .linked {
+  display: flex;
+  flex-wrap: wrap;
+}
+.linked p {
+  color: rgb(136, 136, 136);
+}
+.linked2 img {
+  height: 20px;
+  width: 20px;
 }
